@@ -1,14 +1,20 @@
-N, M = map(int, input().split())
-arr = list(map(int, input().split()))
+ N = int(input())
+ M = int(input())
+ arr = list(map(int,input().split()))
+ arr = sorted(arr)
+ min = min(arr)
+ max = max(arr)
 
-sum = 0
-for x in range(max(arr), min(arr), -1):
-    for i in range(N):
-        if arr[i] > x:
-            sum += arr[i]-x
-            if i == N-1:
-                if sum == M:
-                    print(x)
-                    break
-                else:
-                    sum = 0
+ mid = (max + min)//2
+ sum = 0
+ while result != 1:
+     for i in range(N):
+         if arr[i] > mid:
+             sum += arr[i] - mid
+             if i == N-1:
+                 if sum == M:
+                     result = 1    #while문  문제가 생김
+                 else:
+                     result = 0
+    if sum < M:
+        mid = (arr[])
