@@ -22,5 +22,3 @@ if sound[0] == 8:
             i = i + 1
 if s == 0:
     print("mixed")
-
-
