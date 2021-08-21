@@ -1,17 +1,17 @@
 N = int(input())
 arr = [int(input()) for _ in range(N)]
-print(arr)
+
 for i in range(1, N):
-    print(i)
     now = arr[i]
     copy = 0
-    for j in range(i-1, 0, -1):
-        # print(i, now)
+    for j in range(i-1, -1, -1):
         if now < arr[j]:
             arr[j+1] = arr[j]
-            copy =  1
+            copy = 1
         else:
-            if copy == 1:
-                arr[j+1] = now
+            arr[j+1] = now
             break
-        print(arr)
+        if copy == 1 and j == 0:
+            arr[0] = now
+for _ in range(N):
+    print(arr[_])
